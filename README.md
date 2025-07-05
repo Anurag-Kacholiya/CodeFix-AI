@@ -1,9 +1,7 @@
 # CodeFix-AI
 Developed a VS Code extension using the OpenAI API for AI-assisted debugging. Extract errors from the terminal using OCR, analyze them using GPT, and provide precise error reasoning and solutions, enhancing developer productivity. Technologies used: OpenAI API, OCR, Node.js, REST API, JSON, NPM
 
-# Terminal Error Solution
-
-The **Terminal Error Solution** extension for Visual Studio Code helps detect terminal errors in real-time and suggests possible solutions powered by GPT. 
+The **CodeFix AI** extension for Visual Studio Code helps detect terminal errors in real-time and suggests possible solutions powered by GPT. 
 
 ## Features
 
