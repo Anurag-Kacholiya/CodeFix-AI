@@ -1,0 +1,66 @@
+{
+  "name": "terminal-error-solution",
+  "displayName": "Terminal Error Solution",
+  "description": "Detects terminal errors in real-time and suggests GPT-based solutions.",
+  "version": "0.0.1",
+  "publisher": "arin",
+  "engines": {
+    "vscode": "^1.99.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./dist/extension.js",
+  "activationEvents": [
+    "onCommand:extension.captureTerminalScreenshot"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.captureTerminalScreenshot",
+        "title": "Capture Terminal Screenshot"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "npm run check-types && npm run lint && node esbuild.js",
+    "watch": "npm-run-all -p watch:*",
+    "watch:esbuild": "node esbuild.js --watch",
+    "watch:tsc": "tsc --noEmit --watch --project tsconfig.json",
+    "package": "npm run check-types && npm run lint && node esbuild.js --production",
+    "check-types": "tsc --noEmit",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@types/screenshot-desktop": "^1.12.3",
+    "@typescript-eslint/eslint-plugin": "^8.28.0",
+    "@typescript-eslint/parser": "^8.28.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "esbuild": "^0.25.1",
+    "eslint": "^9.23.0",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^5.8.2",
+    "vscode": "^1.1.37"
+  },
+  "dependencies": {
+    "@google-cloud/vision": "^5.1.0",
+    "axios": "^1.8.4",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "python-shell": "^5.0.0",
+    "screenshot-desktop": "^1.15.1",
+    "sharp": "^0.34.1",
+    "tesseract.js": "^6.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/terminal-error-solution"
+  },
+  "author": "Arin",
+  "license": "MIT"
+}
